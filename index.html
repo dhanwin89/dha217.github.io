@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <title>Document</title>
+</head>
+<style>
+  .carousel-item {
+    height: 65vh;
+    min-height: 350px;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
+  .features-icons {
+    padding-bottom: 7rem;
+  }
+
+
+  .text-center {
+    text-align: center !important;
+  }
+
+  .bg-light {
+    background-color: #f8f9fa !important;
+  }
+
+  .container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+
+  .features-icons .features-icons-item {
+    max-width: 20rem;
+  }
+
+
+  .mx-auto {
+    margin-left: auto !important;
+  }
+
+  .mr-auto,
+  .mx-auto {
+    margin-right: auto !important;
+  }
+
+
+  .mb-5,
+  .my-5 {
+    margin-bottom: 3rem !important;
+  }
+
+  .features-icons .features-icons-item .features-icons-icon {
+    height: 7rem;
+  }
+
+  .d-flex {
+    display: -ms-flexbox !important;
+    display: flex !important;
+  }
+
+  .features-icons .features-icons-item .features-icons-icon i {
+    font-size: 4.5rem;
+  }
+</style>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">Quick Apps</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header>
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner" role="listbox">
+        <!-- Slide One - Set the background image for this slide in the line below -->
+        <div class="carousel-item active" style="background-image: url('images/black.jpg')">
+          <div class="carousel-caption d-none d-md-block">
+            <h3 class="display-4">Quick Apps</h3>
+            <p class="lead">Build your business apps without any coding</p>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#createProject">Get
+              Started</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Content -->
+  <section class="features-icons bg-light text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+            <div class="features-icons-icon d-flex">
+              <i class="material-icons m-auto text-primary">block</i>
+            </div>
+            <h4>No Code</h4>
+            <p class="lead mb-0">Anyone in your team can build app from sources like spreadsheet, cloudsheet or from
+              scratch</p>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+            <div class="features-icons-icon d-flex">
+              <i class="material-icons m-auto text-primary">devices</i>
+            </div>
+            <h4>All Devices</h4>
+            <p class="lead mb-0">Supports multi platforms Web, Android and IOS</p>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="features-icons-item mx-auto mb-0 mb-lg-3">
+            <div class="features-icons-icon d-flex">
+              <i class="material-icons m-auto text-primary">business</i>
+            </div>
+            <h4>Business Templates</h4>
+            <p class="lead mb-0">Provide multiple business templates for building Apps </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- The Modal -->
+  <div class="modal" id="createProject">
+    <div class="modal-dialog">
+      <div class="modal-content">
+
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Create Project</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+
+        <!-- Modal body -->
+        <div class="modal-body">
+          <div class="form-group">
+            <label for="usr">Project Name:</label>
+            <input type="text" value="Manage Production order report" class="form-control">
+          </div>
+
+
+          <div class="container">
+            <p>Options:</p>
+            <form>
+              <div class="form-check">
+                <label class="form-check-label" for="check1">
+                  <input type="checkbox" class="form-check-input" disabled id="check1" name="option1"
+                    value="something">Build from template
+                </label>
+              </div>
+              <div class="form-check">
+                <label class="form-check-label" for="check2">
+                  <input type="checkbox" class="form-check-input" disabled id="check2" name="option2"
+                    value="something">Scartch
+                </label>
+              </div>
+              <div class="form-check">
+                <label class="form-check-label">
+                  <input type="checkbox" class="form-check-input">SpreadSheet
+                </label>
+              </div>
+              <div class="form-check">
+                <label class="form-check-label">
+                  <input type="checkbox" class="form-check-input" disabled>Cloud Sheet
+                </label>
+              </div>
+            </form>
+          </div>
+        </div>
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" onclick="window.location.href='landingPage.html'"
+            data-dismiss="modal">Submit</button>
+          <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</body>
+</html>
