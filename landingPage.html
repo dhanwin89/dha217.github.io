@@ -148,7 +148,7 @@
               </div>
               <div style="font-size: 1rem;font-weight:550;margin-top:9px">List</div>
               <div>
-                <button type="button" style="color:#007bff;" class="btn btn-default"><i
+                <button type="button" style="color:#007bff;" onclick="showFrameAnalytics()" class="btn btn-default"><i
                     class="material-icons">insert_chart</i></button>
               </div>
               <div style="font-size: 1rem;font-weight:550;margin-top:9px">Analytical</div>
@@ -158,10 +158,10 @@
               </div>
               <div style="font-size: 1rem;font-weight:550;margin-top:9px">Forms</div>
               <div>
-                <button type="button" style="color:#007bff;" class="btn btn-default"><i class="material-icons">
+                <button type="button" style="color:#007bff;" class="btn btn-default" onclick="showFrameKanban()"><i class="material-icons">
                     view_array</i></button>
               </div>
-              <div style="font-size: 1rem;font-weight:550;margin-top:9px">Kanban</div>
+              <div style="font-size: 1rem;font-weight:550;margin-top:9px" onclick="showFrameKanban()" >Kanban</div>
               <div>
                 <button type="button" style="color:#007bff;" class="btn btn-default"><i
                     class="material-icons">dashboard</i></button>
@@ -182,9 +182,9 @@
       <div class="panel panel-default">
         <div class="panel-heading" style="font-weight: bolder;">User Interface View
           <div class="btn-group" style="margin-left: 20px;position: relative;left: 200px;">
-            <button type="button" title="Web" onclick="showFrameListWeb()" class="btn btn-primary"> <i
+            <button type="button" title="Web" onclick="showFrameWeb()" class="btn btn-primary"> <i
                 class="material-icons">laptop_chromebook</i></button>
-            <button type="button" title="Android" onclick="showFrameListAndroid()" class="btn btn-primary"><i
+            <button type="button" title="Android" onclick="showFrameAndroid()" class="btn btn-primary"><i
                 class="material-icons">phone_android</i></button>
             <button type="button" title="iPhone" onclick="showFrameListApple()" class="btn btn-primary"><i
                 class="material-icons">phone_iphone</i></button>
@@ -193,7 +193,7 @@
         </div>
 
         <div class="panel-body" style="text-align:center;height: 480px;">
-          <iframe src="listReport.html" width="98%" id="idFrame" style="visibility: hidden;" height="100%"
+          <iframe  width="98%" id="idFrame" style="visibility: hidden;" height="100%"
             style="margin:auto; border:1px solid black;"></iframe>
         </div>
       </div>
