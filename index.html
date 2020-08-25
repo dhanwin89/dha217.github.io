@@ -9,6 +9,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="index.js"></script>
 
   <title>Document</title>
 </head>
@@ -77,6 +78,10 @@
     height: 7rem;
   }
 
+  .wrapper-vendor{
+    margin-top: 20px;
+  }
+
   .d-flex {
     display: -ms-flexbox !important;
     display: flex !important;
@@ -91,7 +96,7 @@
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="#">Quick Apps</a>
+      <a class="navbar-brand" href="#">CustomRapid</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
         aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -123,7 +128,7 @@
         <!-- Slide One - Set the background image for this slide in the line below -->
         <div class="carousel-item active" style="background-image: url('images/black.jpg')">
           <div class="carousel-caption d-none d-md-block">
-            <h3 class="display-4">Quick Apps</h3>
+            <h3 class="display-4">CustomRapid</h3>
             <p class="lead">Build your business apps without any coding</p>
             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#createProject">Get
               Started</button>
@@ -184,42 +189,107 @@
         <div class="modal-body">
           <div class="form-group">
             <label for="usr">Project Name:</label>
-            <input type="text" value="Manage Production order report" class="form-control">
+            <input type="text" placeholder="Enter app name..." class="form-control">
           </div>
-
 
           <div class="container">
             <p>Options:</p>
             <form>
               <div class="form-check">
                 <label class="form-check-label" for="check1">
-                  <input type="checkbox" class="form-check-input" disabled id="check1" name="option1"
-                    value="something">Build from template
+                  <input type="checkbox" class="form-check-input"  onclick="ShowERP()"  id="check1" name="option1"
+                    value="something">Build app based on ERP provider
                 </label>
               </div>
               <div class="form-check">
                 <label class="form-check-label" for="check2">
-                  <input type="checkbox" class="form-check-input" disabled id="check2" name="option2"
-                    value="something">Scartch
+                  <input type="checkbox" class="form-check-input" onclick="ShowExcel()" id="check2" name="option2"
+                    value="something">Build app based on spreadsheet
                 </label>
               </div>
               <div class="form-check">
                 <label class="form-check-label">
-                  <input type="checkbox" class="form-check-input">SpreadSheet
+                  <input type="checkbox" class="form-check-input">Build app from scratch
                 </label>
-              </div>
-              <div class="form-check">
-                <label class="form-check-label">
-                  <input type="checkbox" class="form-check-input" disabled>Cloud Sheet
-                </label>
-              </div>
+              </div>              
             </form>
           </div>
+
+          <div class="wrapper-erpBlock" id="erp" style="display:none;">
+            <div class="wrapper-vendor">
+              <div class="container">
+                <p>Select the ERP vendor:</p>
+                <form>
+                  <div class="form-check-inline">
+                    <label class="form-check-label" for="check1">
+                      <input type="checkbox" class="form-check-input" id="check1" name="SAP" value="" >SAP
+                    </label>
+                  </div>
+                  <div class="form-check-inline">
+                    <label class="form-check-label" for="check2">
+                      <input type="checkbox" class="form-check-input" id="check2" name="" value="">Salesforce
+                    </label>
+                  </div>
+                  <div class="form-check-inline">
+                    <label class="form-check-label">
+                      <input type="checkbox" class="form-check-input">Workday
+                    </label>
+                  </div>
+                </form>
+              </div>
+  
+            </div>  
+            <div class="wrapper-vendor">
+              <div class="container">
+                <form>
+                  <div class="form-group">
+                    <label for="sel1">Select Industry:</label>
+                    <select class="form-control" id="sel1">
+                      <option>Human Resource</option>
+                      <option>Customer Relation Management</option>
+                      <option>Inventory Management</option>
+                      <option>Finance</option>
+                      <option>Manufacturing</option>
+                      <option>Travel Management</option>
+                    </select>
+                  </div>
+                </form>
+              </div>
+            </div>
+  
+            <div class="form-group">
+              <label for="usr">Enter the business process:</label>
+              <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Search">
+                <div class="input-group-append">
+                  <button class="btn btn-primary"  onclick="ShowAPI()" type="submit">Go</button>  
+                 </div>
+              </div>
+            </div>
+         
+            <div class="wrapper-API" id="api" style="visibility:hidden;">
+              <div class="container">
+                <p>Available API's (From SAP API Business HUB):</p>
+                <form>
+                  <div class="form-check">
+                    <label class="form-check-label" for="check1">
+                      <input type="checkbox" class="form-check-input"
+                        value="something">Production Order
+                    </label>
+                  </div>             
+                </form>
+              </div>
+            </div>
+
+          </div>
+
         </div>
         <!-- Modal footer -->
         <div class="modal-footer">
-          <button type="button" class="btn btn-primary" onclick="window.location.href='landingPage.html'"
+          <button type="button" id="btnUpd" style="display: none;" class="btn btn-primary" onclick="window.location.href='landingPageUp.html'"
             data-dismiss="modal">Submit</button>
+            <button type="button" id="btnAPI" class="btn btn-primary" onclick="window.location.href='landingPage.html'"
+            data-dismiss="modal">Submit</button>  
           <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
         </div>
 

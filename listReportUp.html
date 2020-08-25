@@ -15,7 +15,7 @@
 	<Shell id="shell">
 		<App id="app">
 			<pages>
-				<Page id="page" title="Manage Production Order Report">
+				<Page id="page" title="Machine Maintenance">
 					<content>
 						<l:VerticalLayout width="100%">
 							<fb:FilterBar reset="onReset"
@@ -25,7 +25,7 @@
 								<fb:filterGroupItems>
 									<fb:FilterGroupItem groupName="__$INTERNAL$"
 										name="A"
-										label="Order"
+										label="Machine Id"
 										partOfCurrentVariant="true"
 										visibleInFilterBar="true">
 										<fb:control>
@@ -36,7 +36,7 @@
 									<fb:FilterGroupItem groupName="__$INTERNAL$"
 										name="B"
 										label="Status"
-										labelTooltip="Blood Group"
+										labelTooltip=""
 										mandatory="true"
 										partOfCurrentVariant="true"
 										visibleInFilterBar="true">
@@ -58,13 +58,13 @@
 							</fb:FilterBar>
 						</l:VerticalLayout>
 
-						<Table id="idDonorTable" mode="MultiSelect"
+						<Table id="idTableUp" mode="MultiSelect"
 
 							items="{/}">
 							<headerToolbar>
 								<OverflowToolbar>
 									<content>
-										<Title text="Production Orders"
+										<Title text="Machines"
 											level="H2" />
 										<ToolbarSpacer />
 										<Button text="Add" type="Emphasized" />
@@ -77,18 +77,18 @@
 							<columns>
 								<Column
 									>
-									<Text text="Order" />
+									<Text text="Machine Id" />
 								</Column>
 								<Column
 									minScreenWidth="Tablet"
 									demandPopin="true">
-									<Text text="Material" />
+									<Text text="Machine name" />
 								</Column>
 								<Column
 									minScreenWidth="Desktop"
 									demandPopin="true"
 									hAlign="End">
-									<Text text="Open Quantity" />
+									<Text text="Assigned To" />
                                 </Column>
                                 <Column
                                 >
@@ -106,12 +106,6 @@
                         >
                         <Text text="End" />
                     </Column>
-                    <Column
-                    minScreenWidth="Tablet"
-                    demandPopin="true"
-                    >
-                    <Text text="Progress of Operation" />
-                </Column>
                 <Column
                 minScreenWidth="Tablet"
                 demandPopin="true"
@@ -122,7 +116,7 @@
             minScreenWidth="Tablet"
             demandPopin="true"
             >
-            <Text text="Storage Location" />
+            <Text text="Location" />
         </Column>
 
 							</columns>
@@ -130,23 +124,22 @@
 								<ColumnListItem>
 									<cells>
 										<Text
-											text="{Order}" />
+											text="{MachineId}" />
 										<Text
-											text="{Material}" />
+											text="{MachineDetail}" />
 										<Text
-                                            text="{Open Quantity}" />
+                                            text="{AssignedTo}" />
                                             <Text
 											text="{Status}" />
 										<Text
 											text="{Start}" />
 										<Text
                                             text="{End}" />
-                                            <Text
-											text="{Progress of Operation}" />
+                                           
 										<Text
 											text="{Issues}" />
 										<Text
-											text="{Storage Location}" />        
+											text="{Location}" />        
 									</cells>
 								</ColumnListItem>
 							</items>
@@ -168,21 +161,21 @@
 
                 // create some local data
                 var aData = [
-                    { "_id": { "$oid": "5f3a49682c5e5a46e09977b9" }, "Order": "10100151", "Material": "Chillers", "Open Quantity": "1", "Status": "Created", "Start": "", "End": "", "Progress of Operation": "0%", "Issues": "", "Storage Location": "1" },
-                    { "_id": { "$oid": "5f3a49682c5e5a46e09977ba" }, "Order": "10100152", "Material": "Air handling Unit", "Open Quantity": "1", "Status": "Completed", "Start": "Mon Aug 11 2020 10:55:41", "End": "Mon Aug 12 2020 11:55:41", "Progress of Operation": "100%", "Issues": "", "Storage Location": "1" },
-                    { "_id": { "$oid": "5f3a49682c5e5a46e09977bb" }, "Order": "10100153", "Material": "Chillers", "Open Quantity": "2", "Status": "In process", "Start": "Mon Aug 11 2020 07:55:41", "End": "", "Progress of Operation": "50%", "Issues": "", "Storage Location": "1" },
-                    { "_id": { "$oid": "5f3a49682c5e5a46e09977bc" }, "Order": "10100154", "Material": "Condensing Units", "Open Quantity": "1", "Status": "In process", "Start": "Mon Aug 12 2020 10:55:41", "End": "", "Progress of Operation": "60%", "Issues": "", "Storage Location": "1" },
-                    { "_id": { "$oid": "5f3a49682c5e5a46e09977bd" }, "Order": "10100155", "Material": "Split Units", "Open Quantity": "3", "Status": "Completed", "Start": "Mon Aug 11 2020 07:55:41", "End": "Mon Aug 11 2020 16:00:00", "Progress of Operation": "100%", "Issues": "", "Storage Location": "1" },
-                    { "_id": { "$oid": "5f3a49682c5e5a46e09977be" }, "Order": "10100156", "Material": "Fan Coil Units", "Open Quantity": "5", "Status": "Created", "Start": "", "End": "", "Progress of Operation": "0%", "Issues": "", "Storage Location": "1" },
-                    { "_id": { "$oid": "5f3a49682c5e5a46e09977bf" }, "Order": "10100157", "Material": "Fan Coil Units", "Open Quantity": "2", "Status": "In process", "Start": "Mon Aug 14 2020 10:55:41", "End": "", "Progress of Operation": "70%", "Issues": "", "Storage Location": "1" },
-                    { "_id": { "$oid": "5f3a49682c5e5a46e09977c0" }, "Order": "10100158", "Material": "Split Units", "Open Quantity": "1", "Status": "In process", "Start": "Mon Aug 14 2020 10:55:41", "End": "", "Progress of Operation": "70%", "Issues": "", "Storage Location": "1" },
-                    { "_id": { "$oid": "5f3a49682c5e5a46e09977c1" }, "Order": "10100159", "Material": "Air handling Unit", "Open Quantity": "1", "Status": "Created", "Start": "", "End": "", "Progress of Operation": "0%", "Issues": "", "Storage Location": "1" },
-                    { "_id": { "$oid": "5f3a49682c5e5a46e09977c2" }, "Order": "10100160", "Material": "Air handling Unit", "Open Quantity": "1", "Status": "In process", "Start": "Mon Aug 15 2020 10:55:41", "End": "", "Progress of Operation": "80%", "Issues": "", "Storage Location": "1" }
+                    { "_id": { "$oid": "5f3a49682c5e5a46e09977b9" }, "MachineId": "10100151", "MachineDetail": "Lathe Machine", "AssignedTo": "Rob", "Status": "Created", "Start": "", "End": "", "Progress of Operation": "0%", "Issues": "", "Location": "Plant1" },
+                    { "_id": { "$oid": "5f3a49682c5e5a46e09977ba" }, "MachineId": "10100152", "MachineDetail": "Milling Machine", "AssignedTo": "Joe", "Status": "Completed", "Start": "Mon Aug 11 2020 10:55:41", "End": "Mon Aug 12 2020 11:55:41", "Progress of Operation": "100%", "Issues": "", "Location": "Plant1" },
+                    { "_id": { "$oid": "5f3a49682c5e5a46e09977bb" }, "MachineId": "10100153", "MachineDetail": "CNC", "AssignedTo": "Dave", "Status": "In process", "Start": "Mon Aug 11 2020 07:55:41", "End": "", "Progress of Operation": "50%", "Issues": "", "Location": "Plant1" },
+                    { "_id": { "$oid": "5f3a49682c5e5a46e09977bc" }, "MachineId": "10100154", "MachineDetail": "CNC", "AssignedTo": "Dave", "Status": "In process", "Start": "Mon Aug 12 2020 10:55:41", "End": "", "Progress of Operation": "60%", "Issues": "", "Location": "Plant1" },
+                    { "_id": { "$oid": "5f3a49682c5e5a46e09977bd" }, "MachineId": "10100155", "MachineDetail": "Drilling Machine", "AssignedTo": "Joe", "Status": "Completed", "Start": "Mon Aug 11 2020 07:55:41", "End": "Mon Aug 11 2020 16:00:00", "Progress of Operation": "100%", "Issues": "", "Location": "Plant1" },
+                    { "_id": { "$oid": "5f3a49682c5e5a46e09977be" }, "MachineId": "10100156", "MachineDetail": "Milling Machine", "AssignedTo": "Rob", "Status": "Created", "Start": "", "End": "", "Progress of Operation": "0%", "Issues": "", "Location": "Plant1" },
+                    { "_id": { "$oid": "5f3a49682c5e5a46e09977bf" }, "MachineId": "10100157", "MachineDetail": "CNC", "AssignedTo": "Henry", "Status": "In process", "Start": "Mon Aug 14 2020 10:55:41", "End": "", "Progress of Operation": "70%", "Issues": "", "Location": "Plant1" },
+                    { "_id": { "$oid": "5f3a49682c5e5a46e09977c0" }, "MachineId": "10100158", "MachineDetail": "Assembly Machine", "AssignedTo": "Joan", "Status": "In process", "Start": "Mon Aug 14 2020 10:55:41", "End": "", "Progress of Operation": "70%", "Issues": "", "Location": "Plant1" },
+                    { "_id": { "$oid": "5f3a49682c5e5a46e09977c1" }, "MachineId": "10100159", "MachineDetail": "Threading Machine", "AssignedTo": "Noel", "Status": "Created", "Start": "", "End": "", "Progress of Operation": "0%", "Issues": "", "Location": "Plant1" },
+                    { "_id": { "$oid": "5f3a49682c5e5a46e09977c2" }, "MachineId": "10100160", "MachineDetail": "Industrial Cutter", "AssignedTo": "Nelson", "Status": "In process", "Start": "Mon Aug 15 2020 10:55:41", "End": "", "Progress of Operation": "80%", "Issues": "", "Location": "Plant1" }
                 ];
 
                 // create a JSONModel, fill in the data and bind the Table to this model
                 var oModel = new sap.ui.model.json.JSONModel();
-                var oTable = this.getView().byId("idDonorTable");
+                var oTable = this.getView().byId("idTableUp");
 
                 oModel.setData(aData);
                 oTable.setModel(oModel);

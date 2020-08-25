@@ -29,3 +29,24 @@ function showFrameAndroid() {
     document.getElementById("idFrame").style.visibility = "visible";
     document.getElementById("idFrame").width ="98%";
   }
+  function showFormWeb() {
+    document.getElementById("idFrame").src ="form.html";
+    document.getElementById("idFrame").style.visibility = "visible";
+    document.getElementById("idFrame").width ="98%";
+  }
+  
+  function ShowERP() {
+    document.getElementById("erp").style.display = "initial";
+    document.getElementById("btnAPI").style.display = "initial";
+    document.getElementById("btnUpd").style.display = "none";
+  }
+
+  function ShowAPI() {
+    document.getElementById("api").style.visibility = "visible";
+  }
+
+  function ShowExcel() {
+    document.getElementById("erp").style.display = "none";
+    document.getElementById("btnAPI").style.display = "none";
+    document.getElementById("btnUpd").style.display = "initial";
+  }
