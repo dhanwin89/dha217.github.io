@@ -1,19 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7bfe53b9-d828-4803-9f8a-b3d6e1976330" name="Default Changelist" comment="third commit - ERP vendor cases added">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/form.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/formUp.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/indexUp.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/landingPageUp.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/listReportUp.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xl.html" afterDir="false" />
+    <list default="true" id="7bfe53b9-d828-4803-9f8a-b3d6e1976330" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/landingPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/landingPage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/listReport.html" beforeDir="false" afterPath="$PROJECT_DIR$/listReport.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +36,7 @@
       <option name="presentableId" value="Default" />
       <updated>1597832415408</updated>
       <workItem from="1597832418230" duration="615000" />
-      <workItem from="1598339055705" duration="242000" />
+      <workItem from="1598339055705" duration="936000" />
     </task>
     <task id="LOCAL-00001" summary="second commit">
       <created>1597832526432</created>
@@ -56,7 +45,14 @@
       <option name="project" value="LOCAL" />
       <updated>1597832526432</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="third commit - ERP vendor cases added">
+      <created>1598339325571</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1598339325571</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -81,17 +77,17 @@
     <option name="LAST_COMMIT_MESSAGE" value="third commit - ERP vendor cases added" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="277" y="0" key="CommitChangelistDialog2" timestamp="1598339259976">
+    <state x="277" y="0" key="CommitChangelistDialog2" timestamp="1598339324666">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="277" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1598339259976" />
-    <state x="442" y="220" key="git4idea.rebase.GitRebaseDialog" timestamp="1597832618024">
+    <state x="277" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1598339324666" />
+    <state x="442" y="220" key="git4idea.rebase.GitRebaseDialog" timestamp="1598339360813">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="442" y="220" key="git4idea.rebase.GitRebaseDialog/0.0.1280.680@0.0.1280.680" timestamp="1597832618024" />
-    <state x="383" y="85" key="git4idea.rebase.GitRebaseEditor" timestamp="1597832624581">
+    <state x="442" y="220" key="git4idea.rebase.GitRebaseDialog/0.0.1280.680@0.0.1280.680" timestamp="1598339360813" />
+    <state x="383" y="85" key="git4idea.rebase.GitRebaseEditor" timestamp="1598339367690">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="383" y="85" key="git4idea.rebase.GitRebaseEditor/0.0.1280.680@0.0.1280.680" timestamp="1597832624581" />
+    <state x="383" y="85" key="git4idea.rebase.GitRebaseEditor/0.0.1280.680@0.0.1280.680" timestamp="1598339367690" />
   </component>
 </project>
