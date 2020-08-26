@@ -3,6 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="7bfe53b9-d828-4803-9f8a-b3d6e1976330" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fo.html" beforeDir="false" afterPath="$PROJECT_DIR$/fo.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/foUp.html" beforeDir="false" afterPath="$PROJECT_DIR$/foUp.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r.html" beforeDir="false" afterPath="$PROJECT_DIR$/r.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rUp.html" beforeDir="false" afterPath="$PROJECT_DIR$/rUp.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sm.html" beforeDir="false" afterPath="$PROJECT_DIR$/sm.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +42,7 @@
       <updated>1597832415408</updated>
       <workItem from="1597832418230" duration="615000" />
       <workItem from="1598339055705" duration="936000" />
+      <workItem from="1598477580542" duration="687000" />
     </task>
     <task id="LOCAL-00001" summary="second commit">
       <created>1597832526432</created>
@@ -52,7 +58,14 @@
       <option name="project" value="LOCAL" />
       <updated>1598339325571</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="fourth commit - formating">
+      <created>1598477669565</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1598477669565</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -74,13 +87,14 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="second commit" />
     <MESSAGE value="third commit - ERP vendor cases added" />
-    <option name="LAST_COMMIT_MESSAGE" value="third commit - ERP vendor cases added" />
+    <MESSAGE value="fourth commit - formating" />
+    <option name="LAST_COMMIT_MESSAGE" value="fourth commit - formating" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="277" y="0" key="CommitChangelistDialog2" timestamp="1598339324666">
+    <state x="277" y="0" key="CommitChangelistDialog2" timestamp="1598477668076">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="277" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1598339324666" />
+    <state x="277" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1598477668076" />
     <state x="442" y="220" key="git4idea.rebase.GitRebaseDialog" timestamp="1598339360813">
       <screen x="0" y="0" width="1280" height="680" />
     </state>

@@ -413,7 +413,11 @@
 		<script>
 			sap.ui.controller("myController", {
 				onInit: function() {
-				}
+					this.getView().setBusy(true);
+				},
+				onAfterRendering: function() {
+				this.getView().setBusy(false);
+			}
 			});
 			sap.ui.xmlview({ viewContent: jQuery('#myXml').html() }).placeAt("content");
 		</script>

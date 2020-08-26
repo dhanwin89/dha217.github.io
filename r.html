@@ -1622,7 +1622,11 @@
         sap.ui.controller("myController", {
             onInit: function () {
 
-            },
+                this.getView().setBusy(true);
+				},
+				onAfterRendering: function() {
+				this.getView().setBusy(false);
+			},
             onSearch: function () {
 
                 // create some local data

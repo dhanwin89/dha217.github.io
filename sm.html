@@ -974,6 +974,7 @@
 	<script>
 		sap.ui.controller("mainView.controller", {
 			onInit : function() {
+                this.getView().setBusy(true);
 				  // create some local data
 			var oModel, oView;
 				var sServiceName = "testService";
@@ -992,6 +993,10 @@
 				//oModel.getMetaModel().loaded().then(function() {
 				//	smartForm.bindElement("/Employees('0001')");
 				//});
+               
+				},
+				onAfterRendering: function() {
+				this.getView().setBusy(false);
 			},
 			onExit: function() {
 				this._oMockServer.stop();
